@@ -103,7 +103,7 @@ function removeTiddler(tiddlerDTO) {
   delete loadedTiddlerDTOByID[tiddlerDTO.id];
   var existingTiddler = getTiddler(tiddlerDTO.id);
   if (existingTiddler) {
-    store.remove(existingTiddler.title);
+    store.removeTiddler(existingTiddler.title);
   }
   refresh();
 }
